@@ -1,6 +1,6 @@
 <header>
     <div class="container">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary p-3 mb-5 mt-1">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary p-3 mb-5">
             <div class="container">
               <a class="navbar-brand" href="/">Todo App</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,10 +20,10 @@
                     </ul>
                   </li>
                   <li>
-                    <a href="{%url 'todo_app:create_category'%}"class="nav-link">Create New Category</a>
+                    <a href="{%url 'todo_app:create_category'%}"class="nav-link">Criar categoria</a>
                   </li>
                   <li>
-                    <a href="{%url 'todo_app:todo_entry'%}"class="nav-link">Create New Todo</a>
+                    <a href="{%url 'todo_app:todo_entry'%}"class="nav-link">Criar Tarefa</a>
                   </li>
                   {%endif%}
                 </ul>
@@ -43,14 +43,14 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-bounding-box" viewBox="0 0 16 16">
                           <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5M.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5"/>
                           <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                          </svg> Account
+                          </svg> Perfil
                       </a>
                       <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{request.user.profile.get_abso_url}}">Profile</a></li>
+                        <li><a class="dropdown-item" href="{{request.user.profile.get_abso_url}}">Detalhes</a></li>
                       </ul>
                     </li>
                     <li class="nav-item">
-                      <a href="{%url 'logout' %}" class="nav-link">Logout</a>
+                      <a href="{%url 'logout' %}" class="nav-link">Sair</a>
                     </li>
                   {% endif %}
                 </ul>
