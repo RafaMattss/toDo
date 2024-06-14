@@ -312,3 +312,7 @@ Certifique-se de ter instalado:
 
 ### delete_account_view
 - Permite ao usuário excluir sua conta após uma validação de número aleatório.
+
+## Criador
+
+Rafael Henrique de Mattos Ribeiro
