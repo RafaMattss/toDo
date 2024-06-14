@@ -5,19 +5,19 @@ from django.core import validators
 
 def validate_email_unique(value):
     if User.objects.filter(email=value).exists():
-        raise forms.ValidationError("This Email is already registered. Please use a different email.")
+        raise forms.ValidationError("Este email já foi registrado. Tente novamente com outro.")
 
 class UserForm(forms.ModelForm):
     email = forms.EmailField(
         validators=[
-            validators.EmailValidator(message='Please check your email format.'),
+            validators.EmailValidator(message='Verifique de o email está correto.'),
             validate_email_unique
         ]
     )
     password = forms.CharField(
         widget=forms.PasswordInput(),
         validators=[
-            validators.MinLengthValidator(10, message='You need to write a minimum 10 character long password'),
+            validators.MinLengthValidator(1,message='Coloque uma senha com pelo menos 1 caracter.'),
         ]
     )
 
