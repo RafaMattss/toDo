@@ -213,3 +213,108 @@ O padrão Repository será utilizado para abstrair a lógica de acesso aos dados
 #### Atualizações de segurança e de software
 - Revisões periódicas de segurança.
 - Atualizações regulares de dependências e pacotes.
+
+
+## Primeiros Passos
+
+### Pré-requisitos
+
+Certifique-se de ter instalado:
+
+- Python 3.x
+- Django 3.x ou superior
+- Virtualenv (opcional, mas recomendado)
+
+### Instalação
+
+1. Clone o repositório:
+   ```sh
+   git clone https://github.com/seu-usuario/todo-app.git
+   cd todo-app
+   ```
+2. Crie um ambiente virtual:
+    ```sh
+    python -m venv venv
+    source venv/bin/activate  # Linux ou macOS
+    venv\Scripts\activate     # Windows
+    ```
+3. Instale as dependências:
+    ```sh
+    pip install -r requirements.txt
+    ```
+4. Realize as migrações do banco de dados:
+    ```sh
+    python manage.py migrate
+    ```
+5. Crie um superusuario:
+    ```sh
+    python manage.py createsuperuser
+    ```
+6. Inicie o servidor de desenvolvimento:
+    ```sh
+    python manage.py runserver
+    ```
+
+    --------------------------
+
+## Uso
+- Acesse http://127.0.0.1:8000 em seu navegador.
+- Faça login ou crie uma nova conta.
+- Navegue pela aplicação para gerenciar suas tarefas e categorias.
+
+## Funcionalidades das Views
+### home_view
+- Exibe todas as tarefas ativas e concluídas do usuário autenticado.
+
+### todo_entry_view
+- Permite ao usuário criar uma nova tarefa. As categorias são filtradas com base no usuário atual.
+
+### complete_todo
+- Marca as tarefas selecionadas como concluídas.
+
+### activate_task
+- Reativa as tarefas selecionadas.
+
+### todo_view
+- Exibe os detalhes de uma tarefa específica.
+
+### edit_todo_view
+- Permite ao usuário editar uma tarefa existente.
+
+### delete_todo_view
+- Exclui uma tarefa específica.
+
+### create_category_view
+- Permite ao usuário criar uma nova categoria.
+
+### edit_category_view
+- Permite ao usuário editar uma categoria existente.
+
+### delete_category_view
+- Exclui uma categoria específica.
+
+### category_detail_view
+- Exibe as tarefas ativas de uma categoria específica.
+
+### login_view
+- Permite ao usuário fazer login.
+
+### logout_view
+- Permite ao usuário fazer logout.
+
+### signup_view
+- Permite ao usuário se registrar.
+
+### profile_view
+- Exibe os detalhes do perfil do usuário.
+
+### profile_edit_view
+- Permite ao usuário editar seu perfil.
+
+### delete_account_view
+- Permite ao usuário excluir sua conta após uma validação de número aleatório.
+
+## Criador
+
+Rafael Henrique de Mattos Ribeiro
+
