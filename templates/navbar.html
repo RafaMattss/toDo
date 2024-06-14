@@ -10,14 +10,6 @@
                 <ul class="navbar-nav">
                   {% if user.is_authenticated %}
                   <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Categories
-                    </a>
-                    <ul class="dropdown-menu">
-                      {% for cat in categories %}
-                      <li><a class="dropdown-item" href="{{cat.get_abso_url}}">{% if cat.user == request.user %} {{cat.title}} {% endif %}</a></li>
-                      {%endfor%}
-                    </ul>
                   </li>
                   <li>
                     <a href="{%url 'todo_app:create_category'%}"class="nav-link">Criar categoria</a>
@@ -32,10 +24,10 @@
                   {# Account Login - Logout Navigasyon #}
                   {% if not user.is_authenticated %}
                   <li>
-                    <a href="{%url 'signup'%}" class="nav-link"> Sign-up</a>
+                    <a href="{%url 'signup'%}" class="nav-link">Registrar-se</a>
                   </li>
                     <li>
-                      <a href="{%url 'login' %}" class="nav-link">Sign in</a>
+                      <a href="{%url 'login' %}" class="nav-link">Login</a>
                     </li>
                     {% else %}
                     <li class="nav-item dropdown">
