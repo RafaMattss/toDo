@@ -214,6 +214,7 @@ O padrão Repository será utilizado para abstrair a lógica de acesso aos dados
 - Revisões periódicas de segurança.
 - Atualizações regulares de dependências e pacotes.
 
+
 ## Primeiros Passos
 
 ### Pré-requisitos
@@ -316,3 +317,4 @@ Certifique-se de ter instalado:
 ## Criador
 
 Rafael Henrique de Mattos Ribeiro
+
